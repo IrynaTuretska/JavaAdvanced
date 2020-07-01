@@ -1,4 +1,6 @@
-public class Main {
+package ls20200629;
+
+public class Main0629 {
 
     public static void main(String[] args) {
         method(4);

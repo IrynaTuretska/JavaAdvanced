@@ -1,3 +1,5 @@
+package ls20200629;
+
 import java.util.Arrays;
 
 /**
@@ -9,7 +11,7 @@ import java.util.Arrays;
 public class MergeSort {
     public static void main(String[] args) {
 
-        int[] arr = getArray(20, 0, 50);
+        int[] arr = getArray(20, 0, 30);
         System.out.println(Arrays.toString(arr));
         sort(arr);
         System.out.println("Array is sorted: " + isArraySort(arr));
@@ -22,14 +24,17 @@ public class MergeSort {
 
     private static void sort(int[] arr, int from, int to) {//работает с кусочком массива, который мы задали
         //if (to > from) {// проверяем, что на входе, имеет ли смысл сортировка
-        if (to - from > 1) { //есть что проверять, отсекает условие, если массив состоит из одного элемента
-            int middle = (from + to) / 2; //середина куска массива
-            sort(arr, from, middle); //left part
-            sort(arr, middle, to); //right part
 
-            merge(arr, from, middle, to);
-        }
+        //метод на каждом шаге дробит массив пополам, и каждый из них отдельно сортирует вызывая самого себя,
+        // пока не доходит до единичного элемента, который по определению сортирован
+        // и после этого соединяет - merge
+        int middle = (from + to) / 2; //середина куска массива
+        sort(arr, from, middle); //left part
+        sort(arr, middle, to); //right part
+
+        merge(arr, from, middle, to);
     }
+
     //from - start index for the first range [from ... middle-1]
     //middle - start index for the second range [middle ... to]
     //
@@ -37,8 +42,8 @@ public class MergeSort {
         int[] arr1 = Arrays.copyOfRange(arr, from, middle); //создание копии массива диапазона из исходного
         int[] arr2 = Arrays.copyOfRange(arr, middle, to);
 
-        int x1 = 0, x2 = 0; //индексы в результирующем массиве
-        int i = from; //стартовый индекс в исходном массиве
+        int x1 = 0, x2 = 0; //стартовые индексы в подмассивах
+        int i = from; //стартовый индекс в результирующем массиве
         while (x1 < arr1.length && x2 < arr2.length) {
 //            if (arr1[x1] < arr2[x2]) {
 //                arr[i] = arr1[x1++];//сдвиг индекса внутри!!
@@ -46,10 +51,9 @@ public class MergeSort {
 //                arr[i] = arr2[x2++];
 //            }
 //            i++;
-
             arr[i++] = (arr1[x1] < arr2[x2]) ? arr1[x1++] : arr2[x2++];
         }
-        // выполняется один из этих двух циклов, если один из подмассивов закончился
+        // выполняется один из этих двух циклов, если один из подмассивов закончился, переброска оставшихся элементов
         while (x1 < arr1.length) {
             arr[i++] = arr1[x1++];
         }
