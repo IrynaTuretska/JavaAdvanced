@@ -10,4 +10,8 @@ public class Programmer extends Employee {
     public void work() {
         System.out.println("programmer: I'm writing code");
     }
+
+    public void codeReview(){
+
+    }
 }

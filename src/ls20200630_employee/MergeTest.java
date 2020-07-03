@@ -12,7 +12,7 @@ public class MergeTest {
 
     public static void mergeTry() {
         int[] array = {5, 8, 3, 4, 9, 6, 32, 1, 7, 12, 0, 87};
-        int[] arrayRes = new int[]{array.length};
+        int[] arrayRes = new int[array.length];
 //разбивка на два подмассива
         int from = 0;
         int to = array.length;

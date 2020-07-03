@@ -1,20 +1,12 @@
-package hw14_1;
+package hw14_1_hw15_1;
 
 /**
  * JavaAdvanced 02.07.2020
  */
-public class Employee {
+public class Employee{
     private String name;
     private String position;
     private double salary;
-    private double managerBonus;
-
-    public Employee(String name, String position, double salary, double managerBonus) {
-        this.name = name;
-        this.position = position;
-        this.salary = salary;
-        this.managerBonus = managerBonus;
-    }
 
     public Employee(String name, String position, double salary) {
         this.name = name;
@@ -28,7 +20,7 @@ public class Employee {
     }
 
     public void pay() {
-        System.out.println(name + ": to pay,EUR: " + (salary + managerBonus));
+        System.out.println(name + ": to pay,EUR: " + salary);
     }
 
     public String getName() {
@@ -41,10 +33,6 @@ public class Employee {
 
     public double getSalary() {
         return salary;
-    }
-
-    public double getManagerBonus() {
-        return managerBonus;
     }
 
     public void work() {

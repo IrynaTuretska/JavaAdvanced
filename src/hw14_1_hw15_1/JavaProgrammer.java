@@ -1,4 +1,4 @@
-package hw14_1;
+package hw14_1_hw15_1;
 
 /**
  * JavaAdvanced 02.07.2020
@@ -10,7 +10,7 @@ public class JavaProgrammer extends Programmer {
     }
 
     public void work() {
-        System.out.println("My name is " + getName() + ". I'm " + getPosition() + " I write Java program");
+        System.out.println("My name is " + getName() + ". I'm " + getPosition() + ". I write Java program");
     }
 
     public void codeReview() {

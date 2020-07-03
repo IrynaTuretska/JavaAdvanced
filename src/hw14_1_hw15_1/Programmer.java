@@ -1,4 +1,4 @@
-package hw14_1;
+package hw14_1_hw15_1;
 
 /**
  * JavaAdvanced 02.07.2020
