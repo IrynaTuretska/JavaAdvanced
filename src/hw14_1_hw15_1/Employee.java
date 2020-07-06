@@ -35,8 +35,7 @@ public class Employee{
         return salary;
     }
 
-    public void work() {
-    }
+    public void work() {}
 
     public void codeReview() {
     }

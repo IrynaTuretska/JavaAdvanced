@@ -42,7 +42,16 @@ public class EmployeeArray {
 
     public static void codeReviewAll(Employee[] employees) {
         for (Employee employee : employees) {
-            employee.codeReview();
+            if(isProgrammer(employee)){
+                employee.codeReview();
+            }
         }
+    }
+    private static boolean isProgrammer(Employee employee) {
+        if (employee instanceof Programmer) {// instance of оператор - является ли эта позиция объектом данного класса
+            //с одной стороны ссылочная переменная, с другой - название класса
+            return true;
+        }
+        return false;
     }
 }

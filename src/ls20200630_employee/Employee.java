@@ -14,7 +14,7 @@ public class Employee {
 
     @Override // означает, что метод переопределен
     public String toString() {
-        return "ls20200630_employee.Employee " + name + " ( " + salary + " )";
+        return "Employee " + name + " ( " + salary + " )";
     }
 
     //overloading - два одинаковых метода  одном классе

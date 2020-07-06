@@ -5,6 +5,8 @@ package hw14_1_hw15_1;
  */
 public class Main {
     public static void main(String[] args) {
+        //eeArray employees = new EmployeeArray(EmployeeArray.getEmployees());
+
 
         EmployeeArray.printAll(EmployeeArray.getEmployees());
         System.out.println("- - - - - -");
