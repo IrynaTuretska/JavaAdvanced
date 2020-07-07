@@ -4,29 +4,30 @@ package hw16_1_garden;
  * JavaAdvanced 05.07.2020
  */
 public class Bush extends Plant {
-    int springGrowth = 10;
-    int summerGrowth = 10;
-    int autumnGrowth = 3;
+    private int springGrowth = 10;
+    private int summerGrowth = 10;
+    private int autumnGrowth = 3;
 
     public Bush(String name, int startGrowth) {
         super(name, startGrowth);
     }
 
-    public void spring() {
-        System.out.println(getName() + ": spring growth, cm: " + (getStartGrowth() + springGrowth));
+    @Override
+    public int getSpringGrowth() {
+        return springGrowth;
     }
 
-    public void summer() {
-        System.out.println(getName() + ": summer growth, cm: " + (getStartGrowth() + springGrowth + summerGrowth));
+    @Override
+    public int getSummerGrowth() {
+        return summerGrowth;
     }
 
-    public void autumn() {
-        System.out.println(getName() + ": autumn growth, cm: " + (getStartGrowth() + springGrowth
-                + summerGrowth + autumnGrowth));
+    @Override
+    public int getAutumnGrowth() {
+        return autumnGrowth;
     }
-
-    public void winter() {
-        System.out.println(getName() + ": winter growth, cm: " + (getStartGrowth() + springGrowth
-                + summerGrowth + autumnGrowth));
+    @Override
+    public int getWinterGrowth() {
+        return 0;
     }
 }

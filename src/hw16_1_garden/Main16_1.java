@@ -8,19 +8,13 @@ public class Main16_1 {
 
         Plant[] plants = DBPlants.getPlants();
 
-
-
         for (Plant element : plants) {
             element.year();
+            element.year(); //second year!
         }
         System.out.println("- - - - - -");
 
-        for (Plant element : plants) {
-            element.spring();
-            element.summer();
-            element.autumn();
-            element.winter();
-        }
+
     }
 }
 
