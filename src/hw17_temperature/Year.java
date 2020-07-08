@@ -1,4 +1,4 @@
-package hw17;
+package hw17_temperature;
 
 /**
  * JavaAdvanced 07.07.2020
@@ -16,11 +16,9 @@ public class Year {
         this.autumn = autumn;
     }
 
-    public Year(int[] arr1) {
-    }
-
     @Override
     public String toString() {
-        return "winter: " + winter + ", spring: " + spring + ", summer: " + summer + ", autumn: " + autumn;
+        return "Average temperature | winter: " + winter + ", spring: " + spring
+                + ", summer: " + summer + ", autumn: " + autumn;
     }
 }
