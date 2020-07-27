@@ -25,7 +25,7 @@ public class Main {
     public static boolean findDoubleUser(User[] users) {
         for (int i = 0; i < users.length; i++) {
             for (int j = i; j < users.length; j++) {
-                if (users[i] == users[j] && i != j)
+                if (users[i].equals(users[j]) && i != j)
                     return true;
             }
         }
@@ -35,7 +35,7 @@ public class Main {
     public static int findUser(User[] users, User user) {
         int index = 0;
         for (int i = 0; i < users.length; i++) {
-            if (users[i] == user) {
+            if (users[i].equals(user)) {
                 index = i;
             }
         }
