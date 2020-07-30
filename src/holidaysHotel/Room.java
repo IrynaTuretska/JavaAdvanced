@@ -16,6 +16,6 @@ public class Room {
 
     @Override
     public String toString() {
-        return "Person q-ty - " + this.personQty + "; Price for one night - " + this.price + " EUR; Category - " + this.category;
+        return "ls20200727.ls20200727.Person q-ty - " + this.personQty + "; Price for one night - " + this.price + " EUR; Category - " + this.category;
     }
 }

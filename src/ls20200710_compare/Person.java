@@ -34,7 +34,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "ls20200727.ls20200727.Person{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';

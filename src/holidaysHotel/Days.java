@@ -3,12 +3,12 @@ package holidaysHotel;
 /**
  * JavaAdvanced 21.07.2020
  */
-public class Duration {
+public class Days {
     int day;
     String month;
     int year;
 
-    public Duration(int day, String month, int year) {
+    public Days(int day, String month, int year) {
         this.day = day;
         this.month = month;
         this.year = year;

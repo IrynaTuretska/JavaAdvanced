@@ -6,11 +6,11 @@ package holidaysHotel;
 public class Booking {
     Client client;
     Room room;
-    Duration checkIn;
-    Duration checkOut;
+    Days checkIn;
+    Days checkOut;
 
 
-    public Booking(Duration checkIn, Duration checkOut, Client client, Room room) {
+    public Booking(Days checkIn, Days checkOut, Client client, Room room) {
         this.checkIn = checkIn;
         this.checkOut = checkOut;
         this.client = client;
