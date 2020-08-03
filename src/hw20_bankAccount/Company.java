@@ -3,14 +3,13 @@ package hw20_bankAccount;
 /**
  * JavaAdvanced 30.07.2020
  */
-public class Company extends BankClient {
+public class Company {
     private String typeOfOwnership;
     private String companyName;
 
 
-    public Company(String client, String accountNumber, String typeOfOwnership, String companyName) {
-        super(client, accountNumber);
-        this.typeOfOwnership = typeOfOwnership;
+    public Company(String typeOfOwnership, String companyName) {
+                this.typeOfOwnership = typeOfOwnership;
         this.companyName = companyName;
     }
 

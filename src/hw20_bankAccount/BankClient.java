@@ -3,20 +3,27 @@ package hw20_bankAccount;
 /**
  * JavaAdvanced 30.07.2020
  */
-public abstract class BankClient {
-    private String client;
-    private String accountNumber;
+public class BankClient {
+    private PersonPrivate person;
+    private Company company;
+    private String account;
 
-    public BankClient(String client, String accountNumber) {
-        this.client = client;
-        this.accountNumber = accountNumber;
+    public BankClient(PersonPrivate person, String account) {
+        this.person = person;
+        this.account = account;
+    }
+
+    public BankClient(Company company, String account) {
+        this.company = company;
+        this.account = account;
     }
 
     @Override
     public String toString() {
         return "BankClient{" +
-                "client='" + client + '\'' +
-                ", accountNumber='" + accountNumber + '\'' +
+                "person=" + person +
+                ", company=" + company +
+                ", account='" + account + '\'' +
                 '}';
     }
 }

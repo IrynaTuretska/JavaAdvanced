@@ -3,13 +3,13 @@ package hw20_bankAccount;
 /**
  * JavaAdvanced 30.07.2020
  */
-public class PersonPrivate extends BankClient {
+public class PersonPrivate {
     private String name;
     private String secondName;
 
 
-    public PersonPrivate(String client, String accountNumber, String name, String secondName) {
-        super(client, accountNumber);
+    public PersonPrivate(String name, String secondName) {
+
         this.name = name;
         this.secondName = secondName;
     }
