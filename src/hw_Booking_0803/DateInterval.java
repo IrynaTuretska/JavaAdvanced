@@ -1,4 +1,4 @@
-package ls20200731_Booking;
+package hw_Booking_0803;
 
 /**
  * JavaAdvanced 31.07.2020
@@ -25,16 +25,15 @@ public class DateInterval {
     public int countDays() {
         int days;
         if (start.getYear() == finish.getYear()) {
-            days = finish.daysFormTheYearBegin(finish.getDay(), finish.getMonth(), finish.getYear())
-                    - start.daysFormTheYearBegin(start.getDay(), start.getMonth(), start.getYear());
+            days = finish.daysFromTheYearBegin(finish.getDay(), finish.getMonth(), finish.getYear())
+                    - start.daysFromTheYearBegin(start.getDay(), start.getMonth(), start.getYear());
         } else {
             days = start.checkLeapYear(getStart().year)
-                    - start.daysFormTheYearBegin(start.getDay(), start.getMonth(), start.getYear())
-                    + finish.daysFormTheYearBegin(finish.getDay(), finish.getMonth(), finish.getYear());
+                    - start.daysFromTheYearBegin(start.getDay(), start.getMonth(), start.getYear())
+                    + finish.daysFromTheYearBegin(finish.getDay(), finish.getMonth(), finish.getYear());
         }
         return days;
     }
-
 
     //рандомный вывод количества дней
 //    public int getDays() {

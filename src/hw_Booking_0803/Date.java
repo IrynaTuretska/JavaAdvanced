@@ -1,4 +1,4 @@
-package ls20200731_Booking;
+package hw_Booking_0803;
 
 /**
  * JavaAdvanced 31.07.2020
@@ -33,7 +33,7 @@ public class Date {
             return 365;
     }
 
-    public int daysFormTheYearBegin(int day, int month, int year) {
+    public int daysFromTheYearBegin(int day, int month, int year) {
         int daysInMonth = 0;
         for (int i = 1; i < month; i++) {
             switch (i) {

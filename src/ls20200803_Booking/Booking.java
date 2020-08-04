@@ -1,10 +1,6 @@
-package ls20200731_Booking;
+package ls20200803_Booking;
 
-/**
- * JavaAdvanced 31.07.2020
- */
 public class Booking {
-    //private int id;
     private Room room;
     private Person person;
     private DateInterval dateInterval;
@@ -23,13 +19,20 @@ public class Booking {
         return person;
     }
 
+    public DateInterval getDateInterval() {
+        return dateInterval;
+    }
+
     public double getPrice() {
-        return this.room.getPrice() * this.dateInterval.countDays();
+        return this.room.getPrice() * this.dateInterval.getDays();
     }
 
     @Override
     public String toString() {
-        return "Booking: " + room + ", person: " + person + dateInterval
-                + "\n\tprice for " + dateInterval.countDays() + " days is " + getPrice() + " Euro";
+        return "Booking: " + room +
+                " person: " + person +
+                " " + dateInterval +
+                " \n\tprice for " + this.dateInterval.getDays() + " days is " +
+                getPrice() + " EUR";
     }
 }
