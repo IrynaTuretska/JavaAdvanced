@@ -10,7 +10,7 @@ public class UsersArray {
         this.users = users;
     }
 
-    //переопределить метод equals в User! до этого - сравнивает адреса в пямяти, после - объекты
+    //переопределить метод equals в User! до этого - сравнивает адреса в памяти, после - объекты
     public boolean findDoubleUsers() {
         for (int i = 0; i < users.length; i++) {
             for (int j = i + 1; j < users.length; j++) {

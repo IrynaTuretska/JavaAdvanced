@@ -1,9 +1,9 @@
-package ls20200803_Booking;
+package booking;
 
 /**
  * JavaAdvanced 31.07.2020
  */
-public class DeLuxeRoom extends Room {
+public class DeLuxeRoom extends booking.Room {
     private final double priceFactor = 1.7;
     private final double deLuxeTax = 50.0;
 

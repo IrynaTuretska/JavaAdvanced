@@ -1,4 +1,4 @@
-package ls20200803_Booking;
+package ls20200803_Booking_moved;
 
 public class Booking {
     private Room room;

@@ -16,8 +16,6 @@ public class Word {
 
     @Override
     public String toString() {
-        return "Word {" +
-                "securedWord " + Arrays.toString(securedWord) +
-                ", sum: " + sum + '}';
+        return "Word {" + "securedWord " + Arrays.toString(securedWord) + ", sum: " + sum + '}';
     }
 }

@@ -1,4 +1,4 @@
-package hw_Booking_0803;
+package ls20200803_Booking_moved;
 
 /**
  * JavaAdvanced 31.07.2020

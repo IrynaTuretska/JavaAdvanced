@@ -11,7 +11,5 @@ public class Programmer extends Employee {
         System.out.println("programmer: I'm writing code");
     }
 
-    public void codeReview(){
-
-    }
+     public void codeReview(){};
 }

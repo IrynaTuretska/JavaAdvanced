@@ -1,4 +1,5 @@
 package ls20200630_employee;
+
 /**
  * JavaAdvanced 30.06.2020
  */
@@ -7,19 +8,27 @@ package ls20200630_employee;
 // дочерний класс является сущностью родительского класса
 public class Main {
     public static void main(String[] args) {
+        Manager m1 = new Manager("m1", 1000.0, 100.0);
+        Manager m2 = new Manager("m2", 1001.0, 101.0);
+        ProgrammManager pm1 = new ProgrammManager("pm1", 1002.0);
+
+        ManageAble[] emp = {m1, m2, pm1};
+        emp[0].manage();
+
+
         //цепочка наследования:
         //Object -> ls20200630_employee.Employee -> ls20200630_employee.Programmer
         Programmer prog = new Programmer("Uwe", 1000); //! после создания строки ниже, эта не действует -> garbage collector
         prog = new Programmer("Uwe2", 1500); // создали новый объект вместо старого (строка выше - она удаляется),
         // переменная смотрит на другой объект
 
-        Employee emp2 = new Programmer("Ted",2000); //разные типы переменных - слева родительский, справа - наследующий
+        Employee emp2 = new Programmer("Ted", 2000); //разные типы переменных - слева родительский, справа - наследующий
         //всякий programmer is employee
 
         String[] bonusList = {"Jack", "Anna", "Nick"};
 
         Employee[] employees = DBMock.getEmployees();
-        Programmer[]programmers = DBMock.getProgrammers();
+        Programmer[] programmers = DBMock.getProgrammers();
 
 //        for (Employee employee : employees) {
 //            if (isBonus(bonusList, employee.getName())) {
@@ -36,7 +45,7 @@ public class Main {
             employee.work();
         }
         System.out.println("- - - - - -");
-        for(Programmer programmer : programmers){
+        for (Programmer programmer : programmers) {
             System.out.println(programmer.getName());
             System.out.print("  ");
             programmer.codeReview();
@@ -53,7 +62,7 @@ public class Main {
         return false;
     }
 
-    public static void payForEmployee (Employee employee){
+    public static void payForEmployee(Employee employee) {
         employee.pay();
     }
 }
