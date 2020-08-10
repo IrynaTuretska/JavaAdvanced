@@ -42,4 +42,15 @@ public class DateInterval {
     public String toString() {
         return " [check in: " + start + "; check out: " + finish + "]";
     }
+
+    public boolean dateIntervalsIntersection(DateInterval dI1, DateInterval dI2) {
+        //dI1.start.equals(dI2.start) && dI1.finish.equals(dI2.finish)
+
+        if (dI1.getStart().equals(dI2.start) && dI1.getFinish().equals(dI2.finish)) {
+            System.out.println("Booking dates are intersect, please check the room number");
+
+        } else
+            System.out.println("Booking dates are not intersect");
+            return false;
+    }
 }

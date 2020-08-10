@@ -1,26 +1,26 @@
 package booking;
 
 public class Booking {
-    private booking.Room room;
-    private booking.Person person;
-    private booking.DateInterval dateInterval;
+    private Room room;
+    private Person person;
+    private DateInterval dateInterval;
 
 
-    public Booking(booking.Room room, booking.Person person, booking.DateInterval dateInterval) {
+    public Booking(Room room, Person person, DateInterval dateInterval) {
         this.room = room;
         this.person = person;
         this.dateInterval = dateInterval;
     }
 
-    public booking.Room getRoom() {
+    public Room getRoom() {
         return room;
     }
 
-    public booking.Person getPerson() {
+    public Person getPerson() {
         return person;
     }
 
-    public booking.DateInterval getDateInterval() {
+    public DateInterval getDateInterval() {
         return dateInterval;
     }
 
@@ -30,10 +30,9 @@ public class Booking {
 
     @Override
     public String toString() {
-        return "Booking: " + room +
-                " person: " + person +
-                " " + dateInterval +
-                " \n\tprice for " + this.dateInterval.getDays() + " days is " +
-                getPrice() + " EUR";
+        return "\nBooking: " + room + " person: " + person + " " + dateInterval
+                + " price for " + this.dateInterval.getDays() + " days is " + getPrice() + " EUR";
     }
+
+
 }

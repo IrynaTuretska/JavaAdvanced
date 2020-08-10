@@ -17,7 +17,7 @@ public class ArrayBookingList implements BookingList {
     @Override
     public void add(Booking booking) {
         if (size < capacity) {
-            bookings[size++] = booking;
+            bookings[size++] = booking; // добавление элементов в массив
         } else {
             capacity *= 2; //увеличение размера массива, если в нем уже накопилось минимальное количество
             Booking[] temp = new Booking[capacity]; //создание нового массива размера *2
@@ -25,7 +25,7 @@ public class ArrayBookingList implements BookingList {
                 temp[i] = bookings[i];
             }
             bookings = temp;
-            bookings[size++] = booking;
+            bookings[size++] = booking; // добавление элементов в расширенный массив
         }
     }
 
