@@ -80,18 +80,18 @@ public class Date implements Comparable<Date> {
 
     @Override
     public int compareTo(Date date) {
-        int checkYears = this.year - date.year;
-        int checkMonth = this.month - date.month;
-        int checkDays = this.day - date.day;
+        int differenceYears = this.year - date.year;
+        int differenceMonth = this.month - date.month;
+        int differenceDays = this.day - date.day;
 
-        if (checkYears > 0) {
-            return 1;
-        } else if (checkYears == 0) {
-            if (checkMonth == 0) {
-                return checkDays;
-            } else if (checkMonth > 0) {
-                return 1;
-            } else return -1;
-        } else return -1;
+        if (differenceYears != 0) {
+            return differenceYears;
+        } else {
+            if (differenceMonth != 0) {
+                return differenceMonth;
+            } else {
+                return differenceDays;
+            }
+        }
     }
 }
