@@ -1,4 +1,4 @@
-package ls20200813;
+package ls20200813_remove;
 
 public class ArrayHandler {
     private String[] array;
