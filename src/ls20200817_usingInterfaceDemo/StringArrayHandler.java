@@ -4,9 +4,13 @@ import java.util.Arrays;
 
 public class StringArrayHandler {
     private String[] strings;
+    private Action action;
+    private Condition condition;
 
-    public StringArrayHandler(String[] strings) {
+    public StringArrayHandler(String[] strings, Action action, Condition condition) {
         this.strings = strings;
+        this.action = action;
+        this.condition = condition;
     }
 
     public String[] getStrings() {
@@ -19,11 +23,11 @@ public class StringArrayHandler {
     }
 
     //универсальный метод, не зависит от конкретного метода или условия
-    public void stringsHandle(Action action, Condition condition){
+    public void stringsHandle() { //variant: вместо void -> StringArrayHandler
         for (int i = 0; i < strings.length; i++) {
-            if(condition.test(strings[i])){ // проверка условия - true/false
+            if (condition.test(strings[i])) { // проверка условия - true/false
                 strings[i] = action.doAction(strings[i]); // if true, выполняем действие
             }
         }
-    }
+    } //variant: return this;
 }

@@ -3,19 +3,16 @@ package ls20200817_usingInterfaceDemo;
 public class ReverseStringAction implements Action {
     @Override
     public String doAction(String str) {
-// не работает тест на null
-//        char[] chars = str.toCharArray();
-//        String result = "";
-//        if (str == null) {
-//            return null;
-//        } else {
-//            for (int i = chars.length - 1; i >= 0; i--) {
-//                result += chars[i];
-//            }
-//        }
-//        return result;
-//    }
+        if (str == null) return null;
+        char[] chars = str.toCharArray();
+        char[] res = new char[str.length()];
+        for (int i = 0, j = res.length - 1; i < str.length(); i++, j--) {
+            res[j] = chars[i];
+        }
+        return new String(res);
+    }
 
+        /*
         String result = "";
         if (str == null) {
             return null;
@@ -25,5 +22,5 @@ public class ReverseStringAction implements Action {
             }
         }
         return result;
-    }
+    }*/
 }
