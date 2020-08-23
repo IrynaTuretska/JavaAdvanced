@@ -1,4 +1,6 @@
-package ls20200817_usingInterfaceDemo;
+package ls20200817_interfaceDemo.conditions;
+
+import ls20200817_interfaceDemo.Condition;
 
 public class LengthCondition implements Condition {
     private int length;

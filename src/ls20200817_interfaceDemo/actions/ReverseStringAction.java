@@ -1,4 +1,6 @@
-package ls20200817_usingInterfaceDemo;
+package ls20200817_interfaceDemo.actions;
+
+import ls20200817_interfaceDemo.Action;
 
 public class ReverseStringAction implements Action {
     @Override

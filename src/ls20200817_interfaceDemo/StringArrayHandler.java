@@ -1,4 +1,4 @@
-package ls20200817_usingInterfaceDemo;
+package ls20200817_interfaceDemo;
 
 import java.util.Arrays;
 
@@ -24,8 +24,12 @@ public class StringArrayHandler {
 
     //универсальный метод, не зависит от конкретного метода или условия
     public void stringsHandle() { //variant: вместо void -> StringArrayHandler
+        if (this.strings == null || this.action == null) {
+            return;
+        }
+
         for (int i = 0; i < strings.length; i++) {
-            if (condition.test(strings[i])) { // проверка условия - true/false
+            if (condition == null || condition.test(strings[i])) { // проверка условия - true/false
                 strings[i] = action.doAction(strings[i]); // if true, выполняем действие
             }
         }

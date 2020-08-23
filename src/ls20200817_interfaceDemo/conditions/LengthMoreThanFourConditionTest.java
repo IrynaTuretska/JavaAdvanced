@@ -1,9 +1,8 @@
-package ls20200817_usingInterfaceDemo;
+package ls20200817_interfaceDemo.conditions;
 
+import ls20200817_interfaceDemo.Condition;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class LengthMoreThanFourConditionTest {
     @Test
