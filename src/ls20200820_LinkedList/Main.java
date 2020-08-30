@@ -17,5 +17,6 @@ public class Main {
         System.out.println("- - - - - -");
         list.removeByIndex(1);
         System.out.println(list);
+
     }
 }
