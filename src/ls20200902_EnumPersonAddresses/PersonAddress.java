@@ -1,4 +1,4 @@
-package ls20200831_PersonAddresses;
+package ls20200902_EnumPersonAddresses;
 
 public class PersonAddress {
     private String address;

@@ -1,9 +1,4 @@
-package ls20200831_PersonAddresses;
-
-import ls20200817_equals_example.Address;
-
-import java.util.ArrayList;
-import java.util.List;
+package ls20200902_EnumPersonAddresses;
 
 public class Main {
     public static void main(String[] args) {

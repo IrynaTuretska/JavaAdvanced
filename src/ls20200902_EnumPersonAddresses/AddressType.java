@@ -1,4 +1,4 @@
-package ls20200831_PersonAddresses;
+package ls20200902_EnumPersonAddresses;
 
 //константы пишутся заглавными буквами, не относятся к полям
 public enum AddressType {

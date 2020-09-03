@@ -1,8 +1,7 @@
-package ls20200831_PersonAddresses;
+package ls20200902_EnumPersonAddresses;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Person {
     private String firstName;
