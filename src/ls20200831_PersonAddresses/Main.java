@@ -1,17 +1,41 @@
 package ls20200831_PersonAddresses;
 
+import ls20200817_equals_example.Address;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Person p1 = null;
-        try {
-            p1 = new Person(null, "secondName1"); //попытайся сделать операцию
-        } catch (Exception e) {
-            System.out.println("person not create");
+
+        PersonAddress address = new PersonAddress("adr1", AddressType.EMAIL);
+        System.out.println(address.getType());
+        System.out.println(address.getType().equals(AddressType.POST));
+        System.out.println(address.getType() == AddressType.POST);
+        System.out.println(address.getType() == AddressType.valueOf("EMAIL"));
+
+        PersonAddress address1 = new PersonAddress("adr1", "POST");
+        System.out.println(address1);
+
+        System.out.println("- - - - - - - -");
+        AddressType[] addressTypes = AddressType.values(); //получен массив с помощью метода values
+        for (int i = 0; i < addressTypes.length; i++) {
+            System.out.println(addressTypes[i]);
         }
-        System.out.println(p1);
+
+        System.out.println(address.getType().test());
+
+        System.out.println(address.getType());
+
+        address.send();
+
+//        Person p1 = null;
+//        try {
+//            p1 = new Person(null, "secondName1"); //попытайся сделать операцию
+//        } catch (Exception e) {
+//            System.out.println("person not create");
+//        }
+//        System.out.println(p1);
 
 //        Person p1 = new Person("name1", "secondName1");
 //        p1.addAddress(new PersonAddress("adr11", "post"));
@@ -37,7 +61,6 @@ public class Main {
 //        people.add(p3);
 //
 //        System.out.println(PersonListHandler.personListHandler(people));
-
 
         //работа с копией объекта
         //List<PersonAddress> tempList = p1.getAddresses("email");

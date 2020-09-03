@@ -2,18 +2,32 @@ package ls20200831_PersonAddresses;
 
 public class PersonAddress {
     private String address;
-    private String type;
+    private AddressType type;
 
     public PersonAddress(String address, String type) {
         this.address = address;
+        try {
+            this.type = AddressType.valueOf(type);
+        } catch (Exception ex) {
+            System.out.println("STOP! The type is not correct");
+            throw ex;
+        }
+    }
+
+
+    public PersonAddress(String address, AddressType type) {
+        this.address = address;
         this.type = type;
+    }
+    public void send(){
+        type.send();
     }
 
     public String getAddress() {
         return address;
     }
 
-    public String getType() {
+    public AddressType getType() {
         return type;
     }
 

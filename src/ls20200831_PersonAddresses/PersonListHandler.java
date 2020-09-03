@@ -2,8 +2,6 @@ package ls20200831_PersonAddresses;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
-import java.util.function.Predicate;
 
 public class PersonListHandler {
     public static List<String> personListHandler(List<Person> people) {
@@ -13,7 +11,7 @@ public class PersonListHandler {
                 List<PersonAddress> tempAddressList = p.getAddresses("email");
                 String nameString = p.getFirstName() + " " + p.getSecondName();
                 for (PersonAddress address : tempAddressList) {
-                    list.add(new String(address.getAddress() + " " + nameString));
+                    list.add(new String(address.getAddress() + " " + nameString)); //привязка адреса к имени
                 }
             }
         }

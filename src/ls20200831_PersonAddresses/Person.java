@@ -7,7 +7,7 @@ import java.util.Objects;
 public class Person {
     private String firstName;
     private String secondName;
-    private List<PersonAddress> addresses; //переменная, которая будет указывать на список
+    private List<PersonAddress> addresses; //на этом этапе - только переменная, которая будет указывать на список, списка нет
 
     public Person(String firstName, String secondName, List<PersonAddress> addresses) {
         this.firstName = firstName;
@@ -36,25 +36,25 @@ public class Person {
     }
 
     public List<PersonAddress> getAddresses() {
-        return new ArrayList<>(addresses); //для защиты - создаем копию листа
+        return new ArrayList<>(addresses); //для защиты - возвращаем не исходный лист, а копию листа
     }
 
     public List<PersonAddress> getAddresses(String type) { //для получения списка адресов с заданным типом
         List<PersonAddress> res = new ArrayList<>();
         for (PersonAddress address : addresses) {
-            if (address.getType().equals(type)) {
+            if (address.getType().equals(type)) {//если тип адреса совпадает с заданным, добавляем адрес
                 res.add(address);
             }
         }
         return res;
     }
 
-    public void addAddress(PersonAddress address) {
-        if (address != null) { //проверка исходного параметра
-            if (addresses == null) { //проверка, существует ли уже лист, куда мы хотим записать адрес
-                addresses = new ArrayList<>();
+    public void addAddress(PersonAddress address) { //добавление адресов, если пришел Person без списка адресов
+        if (address != null) { //проверка исходного параметра, что он не null
+            if (addresses == null) { //проверка, существует ли уже список PersonAddress, куда мы хотим записать адрес
+                addresses = new ArrayList<>(); //если нет - создаем его, 16 элементов по умолчанию
             }
-            addresses.add(address);
+            addresses.add(address); //добавляем адрес в созданный список
         }
     }
 
