@@ -1,4 +1,7 @@
-package ls20200831_personListHandler;
+package ls20200903_personListHandlerNEW;
+
+//добавление к задачке от 31/08/2020 - переопределение с помощью методов с разной сигнатурой в Person, PersonAddress
+
 import java.util.ArrayList;
 import java.util.List;
 

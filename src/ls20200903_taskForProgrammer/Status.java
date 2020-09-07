@@ -1,4 +1,4 @@
-package ls20200903;
+package ls20200903_taskForProgrammer;
 
 public enum Status {
     READY,

@@ -1,4 +1,4 @@
-package ls20200903;
+package ls20200903_taskForProgrammer;
 
 import java.util.ArrayList;
 import java.util.List;

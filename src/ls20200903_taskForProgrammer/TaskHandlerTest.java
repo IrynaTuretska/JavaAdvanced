@@ -1,4 +1,4 @@
-package ls20200903;
+package ls20200903_taskForProgrammer;
 
 import org.junit.jupiter.api.Test;
 
@@ -28,8 +28,8 @@ class TaskHandlerTest {
 
         List<Programmer> programmers = new ArrayList<>();
         programmers.add(p1);
-//        programmers.add(p2);
-//        programmers.add(p3);
+        programmers.add(p2);
+        programmers.add(p3);
 
         TaskForProgrammer taskForProgrammer1 = new TaskForProgrammer(new Task(18, Status.NOTACCEPTED, "2"), p1);
         TaskForProgrammer taskForProgrammer2 = new TaskForProgrammer(new Task(21, Status.NOTACCEPTED, "5"), p2);
@@ -37,9 +37,9 @@ class TaskHandlerTest {
         TaskForProgrammer taskForProgrammer4 = new TaskForProgrammer(new Task(24, Status.NOTACCEPTED, "8"), p3);
         List<TaskForProgrammer> expectedList = new ArrayList<>();
         expectedList.add(taskForProgrammer1);
-//        expectedList.add(taskForProgrammer2);
-//        expectedList.add(taskForProgrammer3);
-//        expectedList.add(taskForProgrammer4);
+        expectedList.add(taskForProgrammer2);
+        expectedList.add(taskForProgrammer3);
+        expectedList.add(taskForProgrammer4);
 
         assertEquals(expectedList,TaskHandler.taskHandler(programmers));
     }

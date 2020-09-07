@@ -1,5 +1,7 @@
 package ls20200902_EnumPersonAddresses;
 
+//доработка задачки от 31/08/2020 - добавление Enum
+
 public class Main {
     public static void main(String[] args) {
 
