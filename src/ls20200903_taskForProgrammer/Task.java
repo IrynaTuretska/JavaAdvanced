@@ -10,7 +10,7 @@ public class Task implements Comparable<Task> {
 
     public Task(int id, Status status, String description) {
         this(id, status, description, Priority.LOW);
-        //        this.id = id;
+//        this.id = id;
 //        this.status = status;
 //        this.description = description;
 //        this.priority = Priority.LOW;
@@ -21,6 +21,10 @@ public class Task implements Comparable<Task> {
         this.status = status;
         this.description = description;
         this.priority = priority;
+    }
+
+    public Priority getPriority() {
+        return priority;
     }
 
     public int getId() {
@@ -48,16 +52,30 @@ public class Task implements Comparable<Task> {
         Task task = (Task) o;
         return id == task.id &&
                 status == task.status &&
-                Objects.equals(description, task.description);
+                Objects.equals(description, task.description) &&
+                priority == task.priority;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, status, description);
+        return Objects.hash(id, status, description, priority);
     }
+
+//    public int numberForPriority(Priority priority) {
+//        return priority.numberForPriority();
+//    }
+//        if (priority.equals(Priority.HIGH)) { //перенесли в класс Priority
+//            return 3;
+//        } else if (priority.equals(Priority.NORMAL)) {
+//            return 2;
+//        } else
+//            return 1;
+//    }
 
     @Override
     public int compareTo(Task o) {
-        return 0;
+        return this.priority.compareTo(o.priority);
+
+        //return (numberForPriority(this.priority) - numberForPriority(o.priority));
     }
 }
